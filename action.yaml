@@ -113,6 +113,9 @@ inputs:
   destroy:
     description: 'Perform Terraform Destroy'
     default: false
+  remove_r53_record_from_state:
+    description: 'Remove main Route53 A record from state before destroy'
+    default: false
   debug:
     description: 'enable debugging'
     default: false
