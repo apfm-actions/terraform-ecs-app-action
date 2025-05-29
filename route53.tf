@@ -8,4 +8,8 @@ resource "aws_route53_record" "default" {
     zone_id                 = module.ecs.lb["zone_id"]
     evaluate_target_health  = true
   }
+
+  lifecycle {
+    ignore_changes = all
+  }
 }
