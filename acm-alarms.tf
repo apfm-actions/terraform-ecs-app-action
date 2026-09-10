@@ -13,7 +13,7 @@ resource "aws_cloudwatch_metric_alarm" "acm_days_to_expiry" {
   actions_enabled     = true
   period              = 86400
   evaluation_periods  = 1
-  threshold           = 45
+  threshold           = 14
   datapoints_to_alarm = 1
   dimensions = {
     CertificateArn = element(concat(aws_acm_certificate.cert.*.arn, [""]), 0)
